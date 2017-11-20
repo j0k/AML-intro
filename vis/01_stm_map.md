@@ -1,4 +1,4 @@
-# Statement Mapping [IDEA | !IMPL]
+# Statement Mapping [IDEA | IMPL]
 
 When code JSON objects:
 ```
@@ -23,3 +23,32 @@ details:
 s: - statement: (it's about statement replacing)
 :! - ONLY WHEN
 ```
+
+```[lingvo] I also want to use the phrase "Full Visual Reflection".```
+
+
+## Works with all as simple objects
+
+```
+j['qty'] = 1
+j['price'] = "1234.56"
+
+def amount(j):
+  return j['qty'] * j['price']
+
+print j['qty']
+print j['price']
+print j['amount']
+```
+have to be
+
+```
+ j as class Trade
+ Trade: .amount = .qty * .price : price, qty -> float
+
+ print j.qty
+ print j.price
+ print j.amount
+```
+
+```[principle] Principle: all objects are short, simple for access and easy for editing.```
