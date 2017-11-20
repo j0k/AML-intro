@@ -36,9 +36,13 @@ j['price'] = "1234.56"
 def amount(j):
   return j['qty'] * j['price']
 
+def debug_str(j):
+  return "{} * {} = {}".format(j["qty"], j["price"], j["amount"])
+
 print j['qty']
 print j['price']
 print j['amount']
+print debug_str(j)
 ```
 have to be
 
@@ -46,9 +50,13 @@ have to be
  j as class Trade
  Trade: .amount = .qty * .price : price, qty -> float
 
+ Trade -> debug.str:
+   "{$.qty} * {$.price} = {$.amount}" %
+
  print j.qty
  print j.price
  print j.amount
+ print debug.str(j)
 ```
 
-```[principle] Principle: all objects are short, simple for access and easy for editing.```
+```[principle] All objects are short, simple for access and easy for editing.```
