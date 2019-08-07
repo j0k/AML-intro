@@ -1,0 +1,8 @@
+<VirtualHost *:8080>
+    ServerAdmin webmaster@dummy-host.example.com
+    DocumentRoot "K:/soft/web/domains/cool-site/htdocs"
+    ServerName cool-site
+    ServerAlias www.cool-site
+    ErrorLog "logs/cool-site-error.log"
+    CustomLog "logs/cool-site-access.log" common
+</VirtualHost>
