@@ -19,3 +19,10 @@ the same as
 ```
 self.client = MongoClient( host, port ) <= [:string, :int] <= self.config['mongoURI'].split(':'))
 ```
+
+
+## file format (FF)
+
+let's think about something like JSON
+
+it will be cool to dump FF object to file and it will be consistent . You can't do smth in JSON course you need end array with ']' : [{}, {}, {}]
