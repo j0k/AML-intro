@@ -56,4 +56,36 @@ expr t a, b, c: a[c] = b[c]
 return b = {}: ["BTC", "LTC"]: t(b,_,$_): _ = getData()
 ```
 
-```[target] Also the most interesting thing - to make simple 'for' walking via complex structures.```
+```
+[target] Also the most interesting thing - to make simple 'for' walking via complex structures.
+```
+
+## semantic possibility
+
+in Python we have:
+```
+a = ["hello", "world", "how", "are", "you"]
+for i,e in enumerate(a[-1::-1]):
+    print(i,e)
+
+<<<
+0 you
+1 are
+2 how
+3 world
+4 hello
+```
+
+it's good to have an option to see:
+```
+a = ["hello", "world", "how", "are", "you"]
+for e in a[-1::-1]:
+  print(e:lp,e)
+  print(e:list_position,e)
+<<<
+4 you
+3 are
+2 how
+1 world
+0 hello
+```
